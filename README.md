@@ -132,6 +132,7 @@ post_test <- glht(res,
 summary(post_test)
 
 #Dunnett's test: comparisons within a reference group = increase in power
+**#use this for clones to compare to none as reference group
 library(multcomp)
 post_test <- glht(res,
                   linfct = mcp(HSrelevel = "Dunnett")
